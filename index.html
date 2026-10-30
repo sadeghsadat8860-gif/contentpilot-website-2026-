@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="کانتنت پایلوت؛ دستیار هوشمند تولید محتوای فارسی برای اینستاگرام و کسب‌وکارها.">
+<title>کانتنت پایلوت | تولید محتوای بهتر، ساده‌تر</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0b1020;--panel:#121a30;--panel2:#18233e;--ink:#f5f7ff;--muted:#aab5ce;--accent:#8b7cff;--accent2:#42d6bd;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#262052 0,transparent 35%),var(--bg);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:23px;letter-spacing:-.5px}.logo span{color:var(--accent2)}
+nav{display:flex;gap:28px;color:var(--muted);font-size:14px}.nav-cta,.btn{border:0;border-radius:12px;padding:11px 19px;background:linear-gradient(110deg,var(--accent),#6d9cff);color:white;font:600 14px Vazirmatn;cursor:pointer;display:inline-block}
+.hero{padding:86px 0 70px;display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:6px 12px;border:1px solid #514a9b;border-radius:99px;color:#c9c2ff;font-size:12px;background:#211d45}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.35;margin:20px 0 16px;letter-spacing:-1.5px}h1 em{font-style:normal;color:var(--accent2)}
+.lead{font-size:17px;color:var(--muted);max-width:550px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.note{color:#8491ad;font-size:12px;margin-top:15px}
+.mock{background:linear-gradient(145deg,#1d2947,#121a30);border:1px solid #34415f;border-radius:22px;padding:20px;box-shadow:0 25px 80px #0007;transform:rotate(-1deg)}
+.mock-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:16px}.dots{display:flex;gap:5px}.dots i{width:7px;height:7px;background:#65718d;border-radius:50%}
+.mock-label{font-size:12px;color:var(--muted)}.mock h3{margin:4px 0 12px;font-size:18px}
+.prompt{background:#0d1427;border:1px solid var(--line);border-radius:12px;padding:13px;color:#dbe2f5;font-size:13px}
+.output{margin-top:12px;background:#172b3d;border:1px solid #285b60;border-radius:12px;padding:14px;font-size:13px}.output strong{color:var(--accent2)}
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.mini{background:#202d4b;border-radius:10px;padding:10px;text-align:center;font-size:11px;color:#c6d0e5}.mini b{display:block;font-size:18px;color:white}
+section{padding:66px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 34px}.section-head h2{font-size:30px;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature,.plan,.faq{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.ic{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#29254f;color:#c6beff;font-size:21px;margin-bottom:12px}
+.feature h3{margin:0 0 6px;font-size:17px}.feature p{margin:0;color:var(--muted);font-size:13px}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}.plan{position:relative}.plan.popular{border-color:#8275ff;background:linear-gradient(160deg,#211e49,var(--panel) 60%)}.tag{font-size:11px;color:#c9c2ff;background:#373064;padding:4px 9px;border-radius:99px}
+.plan h3{font-size:19px;margin:14px 0 0}.price{font-size:30px;font-weight:800;margin:7px 0 0}.price small{font-size:12px;color:var(--muted);font-weight:400}.plan ul{padding:0 18px 0 0;color:var(--muted);font-size:13px;min-height:130px}.plan li{margin:5px 0}.plan .btn{width:100%;text-align:center}
+.faqs{display:grid;grid-template-columns:1fr 1fr;gap:12px}.faq h3{font-size:15px;margin:0 0 5px}.faq p{font-size:13px;color:var(--muted);margin:0}
+.cta{background:linear-gradient(110deg,#272052,#17394a);border:1px solid #4d4b88;border-radius:22px;padding:38px;text-align:center}.cta h2{font-size:27px;margin:0 0 8px}.cta p{color:var(--muted);margin:0 0 20px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:#8491ad;font-size:12px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:55px;gap:35px}.features,.pricing{grid-template-columns:1fr 1fr}.faqs{grid-template-columns:1fr}}
+@media(max-width:540px){.features,.pricing{grid-template-columns:1fr}.wrap{width:min(100% - 28px,1120px)}header{height:70px}.hero{padding:45px 0}.section-head h2{font-size:25px}.cta{padding:27px 18px}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a class="logo" href="#">کانتنت<span>پایلوت</span></a>
+  <nav><a href="#features">امکانات</a><a href="#pricing">تعرفه‌ها</a><a href="#faq">سؤالات متداول</a></nav>
+  <a class="nav-cta" href="#pricing">شروع استفاده</a>
+</header>
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">✦ دستیار هوشمند تولید محتوای فارسی</div>
+      <h1>برای تولید محتوا،<br><em>تنها نمان.</em></h1>
+      <p class="lead">ایده بگیر، سناریوی ریلز بنویس، کپشن بساز و تقویم محتوایی بچین؛ همه در یک دستیار ساده برای رشد صفحه و کسب‌وکارت.</p>
+      <div class="actions"><a class="btn" href="#pricing">پلن مناسبم را انتخاب می‌کنم</a><a class="btn secondary" href="#features">امکانات را ببین</a></div>
+      <div class="note">نسخه اولیه کانتنت پایلوت · ویژه تولیدکنندگان محتوا و کسب‌وکارهای فارسی‌زبان</div>
+    </div>
+    <div class="mock" aria-label="نمونه نمایشی محیط تولید محتوا">
+      <div class="mock-top"><b>کانتنت پایلوت</b><span class="mock-label">پیش‌نمایش محیط کار</span><span class="dots"><i></i><i></i><i></i></span></div>
+      <div class="mock-label">درخواست شما</div><h3>برای صفحه قهوه‌فروشی ایده بده</h3>
+      <div class="prompt">برای یک پیج فروش قهوه، ۳ ایده ریلز جذاب و قابل اجرا پیشنهاد بده. لحن صمیمی و حرفه‌ای باشد.</div>
+      <div class="output"><strong>✦ ایده پیشنهادی</strong><br>«۳ اشتباه رایج که طعم قهوه‌ات را خراب می‌کند»<br><span class="mock-label">قلاب: فکر می‌کنی قهوه‌ات بی‌کیفیته؟ شاید این اشتباه رو می‌کنی…</span></div>
+      <div class="mini-grid"><div class="mini"><b>۵</b>ایده محتوا</div><div class="mini"><b>۳</b>سناریو ریلز</div><div class="mini"><b>۷</b>کپشن</div></div>
+    </div>
+  </div>
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head"><h2>همه ابزارهای محتوایی، یک‌جا</h2><p>از ایده خام تا محتوای آماده انتشار، مسیرت را کوتاه‌تر کن.</p></div>
+      <div class="features">
+        <article class="feature"><div class="ic">✦</div><h3>ایده‌پردازی هوشمند</h3><p>ایده‌های متناسب با حوزه کاری، مخاطب و هدف صفحه‌ات دریافت کن.</p></article>
+        <article class="feature"><div class="ic">▶</div><h3>سناریوی ریلز</h3><p>قلاب شروع، متن اصلی و دعوت به اقدام برای ویدئوهای کوتاه بساز.</p></article>
+        <article class="feature"><div class="ic">✎</div><h3>کپشن و متن تبلیغاتی</h3><p>کپشن، متن استوری، معرفی محصول و متن تبلیغاتی آماده کن.</p></article>
+        <article class="feature"><div class="ic">▦</div><h3>تقویم محتوایی</h3><p>برای انتشار منظم محتوا برنامه هفتگی و ماهانه بچین.</p></article>
+        <article class="feature"><div class="ic">◎</div><h3>لحن ویژه کسب‌وکار</h3><p>سبک نوشتاری برندت را تعریف کن تا خروجی‌ها هماهنگ‌تر باشند.</p></article>
+        <article class="feature"><div class="ic">⚡</div><h3>بسته محتوایی</h3><p>از یک موضوع، چند ایده، سناریو، کپشن و استوری تولید کن.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-head"><h2>ساده شروع کن، حرفه‌ای‌تر ادامه بده</h2><p>قیمت‌های اولیه پیشنهادی؛ جزئیات و محدودیت‌ها پیش از فعال‌سازی پرداخت نهایی می‌شوند.</p></div>
+      <div class="pricing">
+        <article class="plan"><span class="tag">برای شروع</span><h3>رایگان</h3><div class="price">۰ <small>تومان / ماه</small></div><ul><li>۵ کپشن در ماه</li><li>۳ ایده محتوا</li><li>۲ سناریوی ریلز</li></ul><a class="btn secondary" href="#start">به‌زودی</a></article>
+        <article class="plan popular"><span class="tag">پیشنهاد ما</span><h3>حرفه‌ای</h3><div class="price">۱۹۹٬۰۰۰ <small>تومان / ماه</small></div><ul><li>۱۰۰ کپشن در ماه</li><li>۵۰ ایده محتوا</li><li>۳۰ سناریوی ریلز</li><li>تقویم و بسته محتوایی</li></ul><a class="btn" href="#start">به‌زودی</a></article>
+        <article class="plan"><span class="tag">برای رشد جدی</span><h3>ویژه</h3><div class="price">۳۹۹٬۰۰۰ <small>تومان / ماه</small></div><ul><li>۳۰۰ کپشن در ماه</li><li>۱۵۰ ایده محتوا</li><li>۱۰۰ سناریوی ریلز</li><li>مدیریت چند صفحه و لحن برند</li></ul><a class="btn secondary" href="#start">به‌زودی</a></article>
+      </div>
+    </div>
+  </section>
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head"><h2>سؤالات متداول</h2><p>چند پاسخ کوتاه درباره شروع کار با ContentPilot.</p></div>
+      <div class="faqs">
+        <article class="faq"><h3>آیا سایت در حال حاضر امکان خرید دارد؟</h3><p>این نسخه، پیش‌نمایش اولیه سایت است. ثبت‌نام، تولید محتوا و پرداخت هنوز به سرور متصل نشده‌اند.</p></article>
+        <article class="faq"><h3>آیا خروجی‌ها فارسی هستند؟</h3><p>بله؛ تمرکز نسخه اول روی تولید محتوای فارسی و نیازهای کسب‌وکارهای فارسی‌زبان است.</p></article>
+        <article class="faq"><h3>چطور اشتراکم را تمدید کنم؟</h3><p>در نسخه نهایی، از داخل حساب کاربری یا ربات تلگرام می‌توانی وضعیت اشتراک و زمان تمدید را ببینی.</p></article>
+        <article class="faq"><h3>آیا ربات تلگرام هم خواهد داشت؟</h3><p>بله؛ هدف این است که سایت و ربات از یک حساب و اشتراک مشترک استفاده کنند.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="start"><div class="wrap"><div class="cta"><h2>آماده‌ای تولید محتوا را ساده‌تر کنی؟</h2><p>به‌زودی می‌توانی از پنل وب و ربات تلگرام، کنار هم استفاده کنی.</p><a class="btn" href="mailto:hello@contentpilot.example?subject=ContentPilot">درخواست خبررسانی</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© کانتنت پایلوت — تمامی حقوق محفوظ است.</span><span>نسخه نمایشی اولیه · پرداخت و ثبت‌نام هنوز فعال نیست</span></div></footer>
+</body>
+</html>
